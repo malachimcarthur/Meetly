@@ -1,6 +1,4 @@
-import "./App.css";
-
-function App() {
+function Dashboard() {
   return (
     <div
       style={{
@@ -345,4 +343,4 @@ function App() {
   );
 }
 
-export default App;
+export default Dashboard;
