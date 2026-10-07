@@ -14,9 +14,7 @@ function Dashboard() {
     >
       <div
         style={{
-          width: 800,
-          paddingLeft: 16,
-          paddingRight: 16,
+          width: "100%",
           paddingTop: 12,
           paddingBottom: 12,
           background: "#2EA24D",
