@@ -1,4 +1,9 @@
+import { useState } from "react";
+import Menu from "./Menu";
+import AppLogo from "./AppLogo";
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div
       style={{
@@ -22,21 +27,24 @@ function Header() {
           display: "flex",
         }}
       >
-        <img
-          style={{ width: 24, height: 24, borderRadius: 6 }}
-          src="https://placehold.co/24x24"
-        />
-        <div
+        {isMenuOpen && (
+          <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        )}
+        <button
           style={{
-            color: "white",
-            fontSize: 18,
-            fontFamily: "Inter",
-            fontWeight: "700",
-            wordWrap: "break-word",
+            background: "transparent",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
           }}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          AppLogo
-        </div>
+          <img
+            style={{ width: 24, height: 24, borderRadius: 6 }}
+            src="public\source\bg_removal [Background removed].png"
+          />
+        </button>
+        <AppLogo />
       </div>
       <div
         style={{
