@@ -41,7 +41,7 @@ function Header() {
         >
           <img
             style={{ width: 24, height: 24, borderRadius: 6 }}
-            src="public\source\bg_removal [Background removed].png"
+            src="source\bg_removal [Background removed].png"
           />
         </button>
         <AppLogo />

@@ -58,6 +58,19 @@ function Menu({
             display: "flex",
           }}
         >
+          <button
+            style={{
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+            }}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <img
+              style={{ width: 24, height: 24, borderRadius: 6 }}
+              src="source\brand-mark.png"
+            />
+          </button>
           <AppLogo />
         </div>
       </div>
