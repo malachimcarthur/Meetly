@@ -37,7 +37,6 @@ function Share() {
         >
           Create a Meeting
         </div>
-
         <div
           style={{
             alignSelf: "stretch",
