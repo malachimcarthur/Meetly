@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 function AppLogo() {
+  const navigate = useNavigate();
   return (
     <button
       style={{
@@ -11,7 +14,9 @@ function AppLogo() {
         border: "none",
         cursor: "pointer",
       }}
-      onClick={() => {}}
+      onClick={() => {
+        navigate("/");
+      }}
     >
       AppLogo
     </button>

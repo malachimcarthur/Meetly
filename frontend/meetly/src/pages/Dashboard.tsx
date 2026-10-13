@@ -1,6 +1,7 @@
 import Header from "../components/Header";
-
+import { useNavigate } from "react-router-dom";
 function Dashboard() {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -47,17 +48,24 @@ function Dashboard() {
             display: "inline-flex",
           }}
         >
-          <div
+          <button
             style={{
               flex: "1 1 0",
               height: 48,
               background: "#3CC160",
               boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
+              border: "none",
               borderRadius: 14,
+              cursor: "pointer",
+              outline: "1px #D7E7DD solid",
+              outlineOffset: "-1px",
               justifyContent: "center",
               alignItems: "center",
               gap: 8,
               display: "flex",
+            }}
+            onClick={() => {
+              navigate("/create-meeting");
             }}
           >
             <div
@@ -73,14 +81,16 @@ function Dashboard() {
             </div>
             <img
               style={{ width: 16, height: 16, borderRadius: 4 }}
-              src="https://placehold.co/16x16"
+              src="source\plus.png"
             />
-          </div>
-          <div
+          </button>
+          <button
             style={{
               flex: "1 1 0",
               height: 48,
               background: "white",
+              border: "none",
+              cursor: "pointer",
               boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
               borderRadius: 14,
               outline: "1px #D7E7DD solid",
@@ -88,6 +98,9 @@ function Dashboard() {
               justifyContent: "center",
               alignItems: "center",
               display: "flex",
+            }}
+            onClick={() => {
+              navigate("/your-availability");
             }}
           >
             <div
@@ -101,7 +114,7 @@ function Dashboard() {
             >
               Your Availability
             </div>
-          </div>
+          </button>
         </div>
         <div
           style={{

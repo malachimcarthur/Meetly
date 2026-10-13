@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 
 function Confirm() {
   return (
@@ -14,7 +14,6 @@ function Confirm() {
         display: "inline-flex",
       }}
     >
-      <Header />
       <div
         style={{
           alignSelf: "stretch",

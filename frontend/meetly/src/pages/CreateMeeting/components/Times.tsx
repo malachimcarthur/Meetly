@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 
 function Times() {
   return (
@@ -14,7 +14,6 @@ function Times() {
         display: "inline-flex",
       }}
     >
-      <Header />
       <div
         style={{
           alignSelf: "stretch",

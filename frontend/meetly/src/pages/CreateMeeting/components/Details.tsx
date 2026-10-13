@@ -1,6 +1,4 @@
-import Header from "../../components/Header";
-
-function Share() {
+function Details() {
   return (
     <div
       style={{
@@ -14,7 +12,6 @@ function Share() {
         display: "inline-flex",
       }}
     >
-      <Header />
       <div
         style={{
           alignSelf: "stretch",
@@ -83,8 +80,10 @@ function Share() {
             style={{
               width: 24,
               height: 24,
-              background: "#2EA24D",
+              background: "white",
               borderRadius: 12,
+              outline: "1px #D7E7DD solid",
+              outlineOffset: "-1px",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
@@ -93,7 +92,7 @@ function Share() {
           >
             <div
               style={{
-                color: "white",
+                color: "#6B7280",
                 fontSize: 12,
                 fontFamily: "Inter",
                 fontWeight: "700",
@@ -107,7 +106,7 @@ function Share() {
             style={{
               width: 44,
               height: 2,
-              background: "#2EA24D",
+              background: "#D7E7DD",
               borderRadius: 1,
             }}
           />
@@ -115,8 +114,10 @@ function Share() {
             style={{
               width: 24,
               height: 24,
-              background: "#2EA24D",
+              background: "white",
               borderRadius: 12,
+              outline: "1px #D7E7DD solid",
+              outlineOffset: "-1px",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
@@ -125,7 +126,7 @@ function Share() {
           >
             <div
               style={{
-                color: "white",
+                color: "#6B7280",
                 fontSize: 12,
                 fontFamily: "Inter",
                 fontWeight: "700",
@@ -139,7 +140,7 @@ function Share() {
             style={{
               width: 44,
               height: 2,
-              background: "#2EA24D",
+              background: "#D7E7DD",
               borderRadius: 1,
             }}
           />
@@ -147,8 +148,10 @@ function Share() {
             style={{
               width: 24,
               height: 24,
-              background: "#2EA24D",
+              background: "white",
               borderRadius: 12,
+              outline: "1px #D7E7DD solid",
+              outlineOffset: "-1px",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
@@ -157,7 +160,7 @@ function Share() {
           >
             <div
               style={{
-                color: "white",
+                color: "#6B7280",
                 fontSize: 12,
                 fontFamily: "Inter",
                 fontWeight: "700",
@@ -213,7 +216,7 @@ function Share() {
               style={{
                 alignSelf: "stretch",
                 textAlign: "center",
-                color: "#2EA24D",
+                color: "#6B7280",
                 fontSize: 11,
                 fontFamily: "Inter",
                 fontWeight: "500",
@@ -236,7 +239,7 @@ function Share() {
               style={{
                 alignSelf: "stretch",
                 textAlign: "center",
-                color: "#2EA24D",
+                color: "#6B7280",
                 fontSize: 11,
                 fontFamily: "Inter",
                 fontWeight: "500",
@@ -259,7 +262,7 @@ function Share() {
               style={{
                 alignSelf: "stretch",
                 textAlign: "center",
-                color: "#2EA24D",
+                color: "#6B7280",
                 fontSize: 11,
                 fontFamily: "Inter",
                 fontWeight: "500",
@@ -283,148 +286,24 @@ function Share() {
         >
           <div
             style={{
-              color: "#1F2937",
-              fontSize: 13,
-              fontFamily: "Inter",
-              fontWeight: "600",
-              wordWrap: "break-word",
-            }}
-          >
-            Share Event
-          </div>
-          <div
-            style={{
               alignSelf: "stretch",
-              height: 44,
-              paddingLeft: 14,
-              paddingRight: 14,
-              background: "white",
-              boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
-              borderRadius: 14,
-              outline: "1px #D7E7DD solid",
-              outlineOffset: "-1px",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              display: "inline-flex",
-            }}
-          >
-            <div
-              style={{
-                flex: "1 1 0",
-                color: "#6B7280",
-                fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: "400",
-                wordWrap: "break-word",
-              }}
-            >
-              Add email to share
-            </div>
-            <div
-              style={{
-                width: 32,
-                height: 32,
-                background: "#3CC160",
-                boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
-                borderRadius: 14,
-                justifyContent: "center",
-                alignItems: "center",
-                display: "flex",
-              }}
-            >
-              <div
-                style={{
-                  color: "white",
-                  fontSize: 14,
-                  fontFamily: "Inter",
-                  fontWeight: "700",
-                  wordWrap: "break-word",
-                }}
-              >
-                +
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              color: "#1F2937",
-              fontSize: 13,
-              fontFamily: "Inter",
-              fontWeight: "600",
-              wordWrap: "break-word",
-            }}
-          >
-            Shared With
-          </div>
-          <div
-            style={{
-              alignSelf: "stretch",
-              flex: "1 1 0",
-              padding: 7,
-              background: "white",
-              boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
-              borderRadius: 14,
-              outline: "1px #D7E7DD solid",
-              outlineOffset: "-1px",
               flexDirection: "column",
               justifyContent: "flex-start",
-              alignItems: "center",
-              gap: 7,
+              alignItems: "flex-start",
+              gap: 6,
               display: "flex",
             }}
           >
             <div
               style={{
-                alignSelf: "stretch",
-                height: 44,
-                paddingLeft: 14,
-                paddingRight: 14,
-                background: "white",
-                boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
-                borderRadius: 14,
-                outline: "1px #D7E7DD solid",
-                outlineOffset: "-1px",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                display: "inline-flex",
+                color: "#1F2937",
+                fontSize: 13,
+                fontFamily: "Inter",
+                fontWeight: "600",
+                wordWrap: "break-word",
               }}
             >
-              <div
-                style={{
-                  flex: "1 1 0",
-                  color: "black",
-                  fontSize: 14,
-                  fontFamily: "Inter",
-                  fontWeight: "400",
-                  wordWrap: "break-word",
-                }}
-              >
-                jsmith@example.com
-              </div>
-              <div
-                style={{
-                  width: 32,
-                  height: 32,
-                  background: "#3CC160",
-                  boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
-                  borderRadius: 14,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  display: "flex",
-                }}
-              >
-                <div
-                  style={{
-                    color: "white",
-                    fontSize: 14,
-                    fontFamily: "Inter",
-                    fontWeight: "700",
-                    wordWrap: "break-word",
-                  }}
-                >
-                  −
-                </div>
-              </div>
+              Event Name
             </div>
             <div
               style={{
@@ -445,38 +324,69 @@ function Share() {
               <div
                 style={{
                   flex: "1 1 0",
-                  color: "black",
+                  color: "#6B7280",
                   fontSize: 14,
                   fontFamily: "Inter",
                   fontWeight: "400",
                   wordWrap: "break-word",
                 }}
               >
-                jdoe@example.com
+                Add event name
               </div>
+            </div>
+          </div>
+          <div
+            style={{
+              alignSelf: "stretch",
+              flex: "1 1 0",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+              gap: 6,
+              display: "flex",
+            }}
+          >
+            <div
+              style={{
+                color: "#1F2937",
+                fontSize: 13,
+                fontFamily: "Inter",
+                fontWeight: "600",
+                wordWrap: "break-word",
+              }}
+            >
+              About
+            </div>
+            <div
+              style={{
+                alignSelf: "stretch",
+                paddingLeft: 14,
+                paddingRight: 14,
+                paddingTop: 12,
+                paddingBottom: 12,
+                background: "white",
+                boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
+                borderRadius: 14,
+                outline: "1px #D7E7DD solid",
+                outlineOffset: "-1px",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+                display: "flex",
+              }}
+            >
               <div
                 style={{
-                  width: 32,
-                  height: 32,
-                  background: "#3CC160",
-                  boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
-                  borderRadius: 14,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  display: "flex",
+                  alignSelf: "stretch",
+                  color: "#6B7280",
+                  fontSize: 14,
+                  fontFamily: "Inter",
+                  fontWeight: "400",
+                  lineHeight: 20,
+                  wordWrap: "break-word",
                 }}
               >
-                <div
-                  style={{
-                    color: "white",
-                    fontSize: 14,
-                    fontFamily: "Inter",
-                    fontWeight: "700",
-                    wordWrap: "break-word",
-                  }}
-                >
-                  −
-                </div>
+                Add a brief description
               </div>
             </div>
           </div>
@@ -486,10 +396,36 @@ function Share() {
             alignSelf: "stretch",
             justifyContent: "flex-end",
             alignItems: "center",
-            gap: 12,
+            gap: 10,
             display: "inline-flex",
           }}
         >
+          <div
+            style={{
+              width: 200,
+              height: 48,
+              background: "white",
+              boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
+              borderRadius: 14,
+              outline: "1px #D7E7DD solid",
+              outlineOffset: "-1px",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
+            <div
+              style={{
+                color: "#2EA24D",
+                fontSize: 14,
+                fontFamily: "Inter",
+                fontWeight: "700",
+                wordWrap: "break-word",
+              }}
+            >
+              Cancel
+            </div>
+          </div>
           <div
             style={{
               width: 200,
@@ -499,30 +435,9 @@ function Share() {
               borderRadius: 14,
               justifyContent: "center",
               alignItems: "center",
-              gap: 8,
               display: "flex",
             }}
           >
-            <div
-              style={{
-                width: 18,
-                height: 18,
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <div
-                style={{
-                  width: 12,
-                  height: 15,
-                  left: 3,
-                  top: 1.5,
-                  position: "absolute",
-                  outline: "2px white solid",
-                  outlineOffset: "-1px",
-                }}
-              />
-            </div>
             <div
               style={{
                 color: "white",
@@ -532,7 +447,7 @@ function Share() {
                 wordWrap: "break-word",
               }}
             >
-              Share
+              Next Step
             </div>
           </div>
         </div>
@@ -540,4 +455,4 @@ function Share() {
     </div>
   );
 }
-export default Share;
+export default Details;
