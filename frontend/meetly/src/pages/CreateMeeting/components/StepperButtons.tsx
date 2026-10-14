@@ -1,9 +1,11 @@
 function StepperButtons({
   step,
   setStep,
+  navigate,
 }: {
   step: number;
   setStep: (step: number) => void;
+  navigate: (path: string) => void;
 }) {
   return (
     <div
@@ -15,7 +17,7 @@ function StepperButtons({
         display: "inline-flex",
       }}
     >
-      <div
+      <button
         style={{
           width: 200,
           height: 48,
@@ -27,6 +29,16 @@ function StepperButtons({
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
+          cursor: "pointer",
+          border: "none",
+          visibility: step === 3 ? "hidden" : "visible",
+        }}
+        onClick={() => {
+          if (step > 0) {
+            setStep(step - 1);
+          } else {
+            navigate("/");
+          }
         }}
       >
         <div
@@ -38,10 +50,10 @@ function StepperButtons({
             wordWrap: "break-word",
           }}
         >
-          Cancel
+          {step === 0 ? "Cancel" : "Back"}
         </div>
-      </div>
-      <div
+      </button>
+      <button
         style={{
           width: 200,
           height: 48,
@@ -51,6 +63,15 @@ function StepperButtons({
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
+          cursor: "pointer",
+          border: "none",
+        }}
+        onClick={() => {
+          if (step < 3) {
+            setStep(step + 1);
+          } else {
+            navigate("/");
+          }
         }}
       >
         <div
@@ -62,9 +83,9 @@ function StepperButtons({
             wordWrap: "break-word",
           }}
         >
-          Next Step
+          {step === 3 ? "Share" : "Next Step"}
         </div>
-      </div>
+      </button>
     </div>
   );
 }

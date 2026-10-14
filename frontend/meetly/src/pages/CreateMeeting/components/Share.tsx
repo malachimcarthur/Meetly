@@ -248,61 +248,6 @@ function Share() {
             </div>
           </div>
         </div>
-        <div
-          style={{
-            alignSelf: "stretch",
-            justifyContent: "flex-end",
-            alignItems: "center",
-            gap: 12,
-            display: "inline-flex",
-          }}
-        >
-          <div
-            style={{
-              width: 200,
-              height: 48,
-              background: "#3CC160",
-              boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
-              borderRadius: 14,
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 8,
-              display: "flex",
-            }}
-          >
-            <div
-              style={{
-                width: 18,
-                height: 18,
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <div
-                style={{
-                  width: 12,
-                  height: 15,
-                  left: 3,
-                  top: 1.5,
-                  position: "absolute",
-                  outline: "2px white solid",
-                  outlineOffset: "-1px",
-                }}
-              />
-            </div>
-            <div
-              style={{
-                color: "white",
-                fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: "700",
-                wordWrap: "break-word",
-              }}
-            >
-              Share
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
