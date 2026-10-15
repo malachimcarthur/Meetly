@@ -7,6 +7,7 @@ import Confirm from "./components/Confirm";
 import Times from "./components/Times";
 import StepperButtons from "./components/StepperButtons";
 import { useNavigate } from "react-router-dom";
+import { CalendarGrid } from "../../components/Calendar";
 
 function CreateMeeting() {
   const [step, setStep] = useState(0);
@@ -16,7 +17,7 @@ function CreateMeeting() {
       case 0:
         return <Details />;
       case 1:
-        return <Times />;
+        return <CalendarGrid />;
       case 2:
         return <Confirm />;
       case 3:
