@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("meetly")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7c2876149cd75f904c055bde7a7a6370b46ee94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebffd8a46e5a89eeaf6a54de58f33f6e8ec458ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("meetly")]
 [assembly: System.Reflection.AssemblyTitleAttribute("meetly")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
