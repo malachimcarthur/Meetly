@@ -1,4 +1,10 @@
-function Details() {
+import { Dispatch, SetStateAction } from "react";
+
+function Details({
+  setAllowContinue,
+}: {
+  setAllowContinue: Dispatch<SetStateAction<boolean>>;
+}) {
   return (
     <div
       style={{
@@ -69,87 +75,74 @@ function Details() {
             </div>
             <div
               style={{
-                alignSelf: "stretch",
-                height: 44,
-                paddingLeft: 14,
-                paddingRight: 14,
-                background: "white",
-                boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
-                borderRadius: 14,
-                outline: "1px #D7E7DD solid",
-                outlineOffset: "-1px",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                display: "inline-flex",
+                width: "100%",
+                maxWidth: 420,
               }}
             >
-              <div
+              <input
+                type="text"
+                placeholder="Add Event Name"
+                maxLength={100}
                 style={{
-                  flex: "1 1 0",
-                  color: "#6B7280",
-                  fontSize: 14,
-                  fontFamily: "Inter",
-                  fontWeight: "400",
-                  wordWrap: "break-word",
+                  width: "100%",
+                  height: 20,
+                  padding: "10px 14px",
+                  background: "white",
+                  boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
+                  borderRadius: 14,
+                  border: "1px solid #D7E7DD",
+                  outline: "none",
+                  fontSize: 12,
+                  lineHeight: "20px",
                 }}
-              >
-                Add event name
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              alignSelf: "stretch",
-              flex: "1 1 0",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              gap: 6,
-              display: "flex",
-            }}
-          >
-            <div
-              style={{
-                color: "#1F2937",
-                fontSize: 13,
-                fontFamily: "Inter",
-                fontWeight: "600",
-                wordWrap: "break-word",
-              }}
-            >
-              About
+              />
             </div>
             <div
               style={{
                 alignSelf: "stretch",
-                paddingLeft: 14,
-                paddingRight: 14,
-                paddingTop: 12,
-                paddingBottom: 12,
-                background: "white",
-                boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
-                borderRadius: 14,
-                outline: "1px #D7E7DD solid",
-                outlineOffset: "-1px",
+                flex: "1 1 0",
                 flexDirection: "column",
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
+                gap: 6,
                 display: "flex",
               }}
             >
               <div
                 style={{
-                  alignSelf: "stretch",
-                  color: "#6B7280",
-                  fontSize: 14,
+                  color: "#1F2937",
+                  fontSize: 13,
                   fontFamily: "Inter",
-                  fontWeight: "400",
-                  lineHeight: 20,
+                  fontWeight: "600",
                   wordWrap: "break-word",
                 }}
               >
-                Add a brief description
+                About
               </div>
+              <textarea
+                placeholder="Add details"
+                rows={8}
+                style={{
+                  alignSelf: "stretch",
+                  paddingLeft: 14,
+                  paddingRight: 14,
+                  paddingTop: 12,
+                  paddingBottom: 12,
+                  background: "white",
+                  boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
+                  borderRadius: 14,
+                  border: "none",
+                  outline: "1px #D7E7DD solid",
+                  outlineOffset: "-1px",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                  display: "flex",
+                  verticalAlign: "top",
+                  textAlign: "left",
+                  resize: "none",
+                }}
+              />
             </div>
           </div>
         </div>

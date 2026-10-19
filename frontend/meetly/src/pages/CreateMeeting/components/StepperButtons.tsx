@@ -2,10 +2,12 @@ function StepperButtons({
   step,
   setStep,
   navigate,
+  allowContinue,
 }: {
   step: number;
   setStep: (step: number) => void;
   navigate: (path: string) => void;
+  allowContinue: boolean;
 }) {
   return (
     <div

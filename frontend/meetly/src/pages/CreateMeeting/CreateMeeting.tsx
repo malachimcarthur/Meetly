@@ -10,11 +10,12 @@ import { CalendarGrid } from "../../components/Calendar";
 
 function CreateMeeting() {
   const [step, setStep] = useState(0);
+  const [allowContinue, setAllowContinue] = useState(false);
   const navigate = useNavigate();
   const renderStep = () => {
     switch (step) {
       case 0:
-        return <Details />;
+        return <Details setAllowContinue={setAllowContinue} />;
       case 1:
         return <CalendarGrid />;
       case 2:
@@ -22,7 +23,7 @@ function CreateMeeting() {
       case 3:
         return <Share />;
       default:
-        return <Details />;
+        return <Details setAllowContinue={setAllowContinue} />;
     }
   };
   return (
@@ -41,7 +42,12 @@ function CreateMeeting() {
       <Header />
       <Stepper step={step} />
       {renderStep()}
-      <StepperButtons step={step} setStep={setStep} navigate={navigate} />
+      <StepperButtons
+        step={step}
+        setStep={setStep}
+        navigate={navigate}
+        allowContinue={allowContinue}
+      />
     </div>
   );
 }
