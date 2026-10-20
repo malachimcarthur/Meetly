@@ -100,7 +100,7 @@ function Dashboard() {
               display: "flex",
             }}
             onClick={() => {
-              navigate("/your-availability");
+              navigate("/availability");
             }}
           >
             <div
