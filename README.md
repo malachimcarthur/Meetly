@@ -30,6 +30,8 @@ Project for CSCE 378.
 
 ## Backend Setup
 
+NOTE: NOT NEEDED FOR CURRENT BUILD
+
 1. Open a terminal in the backend directory:
 
    ```powershell
