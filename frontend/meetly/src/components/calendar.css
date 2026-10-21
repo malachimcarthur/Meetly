@@ -46,6 +46,105 @@
   position: relative;
   height: 600px;
   border-right: 1px solid #f1f5f9;
-  background-image: linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
-  background-size: 100% 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-section {
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.day-section:hover {
+  background-color: #f1f5f9;
+}
+
+.day-section.active {
+  background-color: #a7f3d0; 
+  border-bottom-color: #2EA24D;
+}
+
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  background: #f1f5f9;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px solid #cbd5e1;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.calendar-header div {
+  padding: 12px 4px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+}
+
+.time-column {
+  background: #f8fafc;
+  border-right: 1px solid #cbd5e1;
+}
+
+.time-slot {
+  height: 60px;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: right;
+  padding-right: 8px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.calendar-day-column {
+  height: 600px;
+  border-right: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.hour-block {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.quarter-section {
+  flex: 1;
+  border-bottom: 1px solid #f1f5f9;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.quarter-section:last-child {
+  border-bottom: none;
+}
+
+.quarter-section:hover {
+  background-color: #f1f5f9;
+}
+
+.quarter-section.active {
+  background-color: #a7f3d0;
+  border-bottom-color: #2EA24D;
 }
