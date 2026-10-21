@@ -1,6 +1,8 @@
-import Header from "../../../components/Header";
+import { useState } from "react";
 
 function Share() {
+  const [email, setEmail] = useState("");
+  const [emailList, setEmailList] = useState([""]);
   return (
     <div
       style={{
@@ -75,18 +77,26 @@ function Share() {
               display: "inline-flex",
             }}
           >
-            <div
+            <input
+              value={email}
+              type="text"
+              placeholder="Add Email"
+              maxLength={100}
               style={{
-                flex: "1 1 0",
-                color: "#6B7280",
-                fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: "400",
-                wordWrap: "break-word",
+                width: "100%",
+                height: 20,
+                padding: "10px 14px",
+                background: "white",
+                boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
+                borderRadius: 14,
+                border: "1px solid #D7E7DD",
+                outline: "none",
+                fontSize: 12,
+                lineHeight: "20px",
               }}
-            >
-              Add email to share
-            </div>
+              onChange={(event) => setEmail(event.target.value)}
+            />
+
             <div
               style={{
                 width: 32,
@@ -99,17 +109,25 @@ function Share() {
                 display: "flex",
               }}
             >
-              <div
+              <button
                 style={{
                   color: "white",
                   fontSize: 14,
                   fontFamily: "Inter",
                   fontWeight: "700",
                   wordWrap: "break-word",
+                  background: "#3CC160",
+                  cursor: "pointer",
+                  border: "none",
+                }}
+                onClick={() => {
+                  if (!emailList[0]) setEmailList([]);
+                  if (email) setEmailList(emailList.concat([email]));
+                  setEmail("");
                 }}
               >
                 +
-              </div>
+              </button>
             </div>
           </div>
           <div
