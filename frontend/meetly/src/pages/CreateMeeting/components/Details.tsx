@@ -2,8 +2,16 @@ import { Dispatch, SetStateAction } from "react";
 
 function Details({
   setAllowContinue,
+  title,
+  setTitle,
+  description,
+  setDescription,
 }: {
   setAllowContinue: Dispatch<SetStateAction<boolean>>;
+  title: string;
+  setTitle: Dispatch<SetStateAction<string>>;
+  description: string;
+  setDescription: Dispatch<SetStateAction<string>>;
 }) {
   return (
     <div
@@ -81,6 +89,8 @@ function Details({
             >
               <input
                 type="text"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
                 placeholder="Add Event Name"
                 maxLength={100}
                 style={{
@@ -121,6 +131,8 @@ function Details({
               </div>
               <textarea
                 placeholder="Add details"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 rows={8}
                 style={{
                   alignSelf: "stretch",

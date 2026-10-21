@@ -11,19 +11,21 @@ import { CalendarGrid } from "../../components/Calendar";
 function CreateMeeting() {
   const [step, setStep] = useState(0);
   const [allowContinue, setAllowContinue] = useState(false);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const navigate = useNavigate();
   const renderStep = () => {
     switch (step) {
       case 0:
-        return <Details setAllowContinue={setAllowContinue} />;
+        return <Details setAllowContinue={setAllowContinue} title={title} setTitle={setTitle} description={description} setDescription={setDescription} />;
       case 1:
         return <CalendarGrid />;
       case 2:
-        return <Confirm />;
+        return <Confirm title={title} description={description} />;
       case 3:
         return <Share />;
       default:
-        return <Details setAllowContinue={setAllowContinue} />;
+        return <Details setAllowContinue={setAllowContinue} title={title} setTitle={setTitle} description={description} setDescription={setDescription} />;
     }
   };
   return (

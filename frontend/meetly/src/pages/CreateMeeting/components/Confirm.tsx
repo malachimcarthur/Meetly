@@ -1,6 +1,12 @@
 import Header from "../../../components/Header";
 
-function Confirm() {
+function Confirm({
+  title,
+  description,
+}: {
+  title: string,
+  description: string,
+}) {
   return (
     <div
       style={{
@@ -77,7 +83,7 @@ function Confirm() {
                   wordWrap: "break-word",
                 }}
               >
-                Event Name
+                {title}
               </div>
             </div>
             <div
@@ -121,7 +127,7 @@ function Confirm() {
                   wordWrap: "break-word",
                 }}
               >
-                Yada yada yada etc etc etc...
+                {description}
               </div>
             </div>
             <div
