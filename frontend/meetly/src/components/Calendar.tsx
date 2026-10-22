@@ -27,20 +27,15 @@ export class CalendarDayRenderer {
   }
 }
 
-const HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
-const HOUR_LABELS = [
-  '8:00 AM',
-  '9:00 AM',
-  '10:00 AM',
-  '11:00 AM',
-  '12:00 PM',
-  '1:00 PM',
-  '2:00 PM', 
-  '3:00 PM', 
-  '4:00 PM', 
-  '5:00 PM'];
-
+const HOURS = Array.from({ length: 24 }, (_, i) => i);
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+function getHourLabel(hour: number): string {
+  const period = hour > 11 ? "PM" : "AM";
+  hour %= 12;
+  if (hour == 0) hour = 12;
+  return `${hour}:00 ${period}`;
+}
 
 export function CalendarGrid({
   activeTimes,
@@ -68,8 +63,8 @@ export function CalendarGrid({
 
       <div className="calendar-body">
         <div className="time-column">
-          {HOUR_LABELS.map(label => (
-            <div key={label} className="time-slot">{label}</div>
+          {HOURS.map(hour => (
+            <div key={hour} className="time-slot">{getHourLabel(hour)}</div>
           ))}
         </div>
 
