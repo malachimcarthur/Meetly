@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import "./calendar.css";
 
 export class CalendarDay {
@@ -42,12 +42,16 @@ const HOUR_LABELS = [
 
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-export function CalendarGrid() {
-  const [activeSections, setActiveSections] = useState<Record<string, boolean>>({});
-
+export function CalendarGrid({
+  activeTimes,
+  setActiveTimes,
+}: {
+  activeTimes: Record<string, boolean>;
+  setActiveTimes: Dispatch<SetStateAction<Record<string, boolean>>>;
+}) {
   const handleQuarterClick = (dayName: string, hour: number, quarterIndex: number) => {
     const key = `${dayName}-${hour}-${quarterIndex}`;
-    setActiveSections(prev => ({
+    setActiveTimes(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
@@ -75,7 +79,7 @@ export function CalendarGrid() {
               <div key={hour} className="hour-block">
                 {[0, 1, 2, 3].map(quarterIndex => {
                   const key = `${dayName}-${hour}-${quarterIndex}`;
-                  const isActive = activeSections[key] || false;
+                  const isActive = activeTimes[key] || false;
                   
                   return (
                     <div

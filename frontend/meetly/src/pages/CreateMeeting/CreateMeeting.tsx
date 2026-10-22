@@ -13,13 +13,14 @@ function CreateMeeting() {
   const [allowContinue, setAllowContinue] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [activeTimes, setActiveTimes] = useState<Record<string, boolean>>({});
   const navigate = useNavigate();
   const renderStep = () => {
     switch (step) {
       case 0:
         return <Details setAllowContinue={setAllowContinue} title={title} setTitle={setTitle} description={description} setDescription={setDescription} />;
       case 1:
-        return <CalendarGrid />;
+        return <CalendarGrid activeTimes={activeTimes} setActiveTimes={setActiveTimes} />;
       case 2:
         return <Confirm title={title} description={description} />;
       case 3:
