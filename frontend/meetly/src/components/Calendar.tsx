@@ -44,13 +44,16 @@ export function CalendarGrid({
   activeTimes: Record<string, boolean>;
   setActiveTimes: Dispatch<SetStateAction<Record<string, boolean>>>;
 }) {
-  const handleQuarterClick = (dayName: string, hour: number, quarterIndex: number) => {
-    const key = `${dayName}-${hour}-${quarterIndex}`;
+  const toKey = (dayName: string, hour: number, quarterIndex: number) => `${dayName}-${hour}-${quarterIndex}`;
+  const getIsActive = (key: string) => activeTimes[key];
+  const setIsActive = (key: string, value: boolean) => {
     setActiveTimes(prev => ({
       ...prev,
-      [key]: !prev[key]
+      [key]: value
     }));
   };
+  const [mouseDown, setMouseDown] = useState(false);
+  const [activeBrush, setActiveBrush] = useState(true);
 
   return (
     <div className="calendar-wrapper">
@@ -80,7 +83,21 @@ export function CalendarGrid({
                     <div
                       key={quarterIndex}
                       className={`quarter-section ${isActive ? 'active' : ''}`}
-                      onClick={() => handleQuarterClick(dayName, hour, quarterIndex)}
+                      onMouseDown={(e) => {
+                        e.preventDefault();
+                        setMouseDown(true);
+                        const key = toKey(dayName, hour, quarterIndex);
+                        const newState = !getIsActive(key);
+                        setIsActive(key, newState);
+                        setActiveBrush(newState);
+                      }}
+                      onMouseUp={() => setMouseDown(false)}
+                      onMouseOver={() => {
+                        if (mouseDown) {
+                          const key = toKey(dayName, hour, quarterIndex);
+                          setIsActive(key, activeBrush);
+                        }
+                      }}
                     />
                   );
                 })}
