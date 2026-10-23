@@ -1,6 +1,9 @@
+import { act, useState } from "react";
 import { CalendarGrid } from "../components/Calendar";
 import Header from "../components/Header";
 function Availability() {
+  const [activeTimes, setActiveTimes] = useState<Record<string, boolean>>({});
+
   return (
     <div
       style={{
@@ -189,7 +192,7 @@ function Availability() {
             </div>
           </div>
         </div>
-        <CalendarGrid />
+        <CalendarGrid activeTimes={activeTimes} setActiveTimes={setActiveTimes} />
         <div
           style={{
             alignSelf: "stretch",
