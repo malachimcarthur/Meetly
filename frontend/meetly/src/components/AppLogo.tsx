@@ -18,7 +18,7 @@ function AppLogo() {
         navigate("/");
       }}
     >
-      AppLogo
+      Meetly
     </button>
   );
 }
