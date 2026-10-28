@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreateMeeting from "./pages/CreateMeeting/CreateMeeting.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Meetly">
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/availability" element={<Availability />} />
