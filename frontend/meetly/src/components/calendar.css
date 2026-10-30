@@ -119,6 +119,9 @@
   background-color: #ffffff;
   cursor: pointer;
   transition: background-color 0.15s ease;
+  text-align: center;
+  font-size: 10px;
+  color: #475569;
 }
 
 .quarter-section:last-child {

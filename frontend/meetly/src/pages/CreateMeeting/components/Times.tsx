@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import Header from "../../../components/Header";
 import { CalendarGrid } from "../../../components/Calendar";
 
@@ -7,6 +7,8 @@ function Times({
 }: {
   setAllowContinue: Dispatch<SetStateAction<boolean>>;
 }) {
+  const [activeTimes, setActiveTimes] = useState({} as Record<string, boolean>);
+
   return (
     <div
       style={{
@@ -213,7 +215,7 @@ function Times({
               Select Available Times
             </div>
           </div>
-          <CalendarGrid />
+          <CalendarGrid activeTimes={activeTimes} setActiveTimes={setActiveTimes} />
         </div>
       </div>
     </div>
