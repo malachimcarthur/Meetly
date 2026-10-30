@@ -1,4 +1,4 @@
-function Email({ email }: { email: String }) {
+function Email({ email, onRemove }: { email: String, onRemove: () => void }) {
   return (
     <div
       style={{
@@ -28,17 +28,20 @@ function Email({ email }: { email: String }) {
       >
         {email}
       </div>
-      <div
+      <button
         style={{
           width: 32,
           height: 32,
           background: "#3CC160",
           boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
+          border: "none",
           borderRadius: 14,
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
+          cursor: "pointer"
         }}
+        onClick={onRemove}
       >
         <div
           style={{
@@ -51,7 +54,7 @@ function Email({ email }: { email: String }) {
         >
           −
         </div>
-      </div>
+      </button>
     </div>
   );
 }

@@ -2,8 +2,21 @@ import { useState } from "react";
 import Email from "./Email";
 
 function Share() {
-  const [email, setEmail] = useState("");
+  const [emailEntry, setEmailEntry] = useState("");
   const [emailList, setEmailList] = useState([] as string[]);
+
+  function AddEmail(email: string) {
+    email = email.toLowerCase();
+    if (email && !emailList.includes(email)) {
+      setEmailList(emailList.concat(email));
+      setEmailEntry("");
+    }
+  }
+
+  function RemoveEmail(email: string) {
+    setEmailList(emailList.filter(e => e !== email));
+  }
+
   return (
     <div
       style={{
@@ -79,7 +92,7 @@ function Share() {
             }}
           >
             <input
-              value={email}
+              value={emailEntry}
               type="text"
               placeholder="Add Email"
               maxLength={100}
@@ -95,12 +108,9 @@ function Share() {
                 fontSize: 12,
                 lineHeight: "20px",
               }}
-              onChange={(event) => setEmail(event.target.value)}
+              onChange={(event) => setEmailEntry(event.target.value)}
               onKeyDown={(event) => {
-                if (event.key === 'Enter') {
-                  if (email) setEmailList(emailList.concat(email));
-                  setEmail("");
-                }
+                if (event.key === 'Enter') AddEmail(emailEntry);
               }}
             />
 
@@ -127,10 +137,7 @@ function Share() {
                   cursor: "pointer",
                   border: "none",
                 }}
-                onClick={() => {
-                  if (email) setEmailList(emailList.concat(email));
-                  setEmail("");
-                }}
+                onClick={() => AddEmail(emailEntry)}
               >
                 +
               </button>
@@ -164,7 +171,9 @@ function Share() {
               display: "flex",
             }}
           >
-            {emailList.length > 0 ? emailList.map(email => <Email email={email} />) : "Add an email to share this meeting"}
+            {emailList.length > 0
+            ? emailList.map(email => <Email email={email} onRemove={() => RemoveEmail(email)} />)
+            : "Add an email to share this meeting"}
           </div>
         </div>
       </div>
