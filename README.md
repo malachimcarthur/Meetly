@@ -1,6 +1,19 @@
 # Meetly
 
-Project for CSCE 378.
+An app for gathering availability to schedule meetings at optimal times.
+Intended users: Anyone that needs to schedule a meeting based around others' schedules.
+
+## Core tasks
+
+- Creating and scheduling an event/meeting
+- Setting own availability in a calendar view
+- Sharing an event/meeting with other users
+
+## Current Limitations
+
+- No info is saved, so all functions are simulated
+- Inputs are not sanitized/validated
+- We tried setting up a github deployment but it broke last minute (sorry we'll try and get that up before the next version)
 
 ## Prerequisites
 
