@@ -13,7 +13,6 @@ Intended users: Anyone that needs to schedule a meeting based around others' sch
 
 - No info is saved, so all functions are simulated
 - Inputs are not sanitized/validated
-- We tried setting up a github deployment but it broke last minute (sorry we'll try and get that up before the next version)
 
 ## Prerequisites
 
