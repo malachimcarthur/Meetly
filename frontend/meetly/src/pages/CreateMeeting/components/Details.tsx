@@ -79,7 +79,7 @@ function Details({
                 wordWrap: "break-word",
               }}
             >
-              Event Name
+              Event Name (Required)
             </div>
             <div
               style={{
@@ -127,7 +127,7 @@ function Details({
                   wordWrap: "break-word",
                 }}
               >
-                About
+                Description (Optional)
               </div>
               <textarea
                 placeholder="Add details"

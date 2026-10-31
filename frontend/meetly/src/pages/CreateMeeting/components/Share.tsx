@@ -86,6 +86,59 @@ function Share() {
               borderRadius: 14,
               outline: "1px #D7E7DD solid",
               outlineOffset: "-1px",
+              justifyContent: "space-between",
+              alignItems: "center",
+              display: "inline-flex",
+            }}
+          >
+            <span 
+            style={{ 
+              flexGrow: 1, 
+              textAlign: "center",
+              paddingLeft: 128 
+            }}
+          >
+            DISPLAY LINK HERE.
+          </span> 
+            <div style ={{justifyContent: "flex-end"}}>
+              <div
+                style={{
+                  width: 128,
+                  height: 32,
+                  background: "#3CC160",
+                  boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
+                  borderRadius: 14,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  display: "flex",
+                }}
+              >
+                <button
+                  style={{
+                    color: "white",
+                    fontSize: 14,
+                    fontFamily: "Inter",
+                    fontWeight: "700",
+                    background: "#3CC160",
+                    cursor: "pointer",
+                    border: "none",}}
+                >
+                  Copy Link
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              alignSelf: "stretch",
+              height: 44,
+              paddingLeft: 14,
+              paddingRight: 14,
+              background: "white",
+              boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
+              borderRadius: 14,
+              outline: "1px #D7E7DD solid",
+              outlineOffset: "-1px",
               justifyContent: "flex-start",
               alignItems: "center",
               display: "inline-flex",
@@ -164,8 +217,10 @@ function Share() {
               borderRadius: 14,
               outline: "1px #D7E7DD solid",
               outlineOffset: "-1px",
+              fontSize: 13,
               flexDirection: "column",
               justifyContent: "flex-start",
+              fontFamily: "Inter",
               alignItems: "center",
               gap: 7,
               display: "flex",
@@ -173,7 +228,7 @@ function Share() {
           >
             {emailList.length > 0
             ? emailList.map(email => <Email email={email} onRemove={() => RemoveEmail(email)} />)
-            : "Add an email to share this meeting"}
+            : "Enter an email above to share this meeting"}
           </div>
         </div>
       </div>
