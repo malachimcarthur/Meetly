@@ -26,6 +26,19 @@ function Details({
         display: "inline-flex",
       }}
     >
+      <style>{`
+        .hint-text {
+          font-family: Inter, sans-serif;
+          font-size: 12px;
+        }
+
+        .hint-text::placeholder {
+          color: #B8BFC9;
+          opacity: 1;
+          font-family: Inter, sans-serif;
+          font-size: 12px;
+        }
+      `}</style>
       <div
         style={{
           alignSelf: "stretch",
@@ -38,17 +51,6 @@ function Details({
           display: "flex",
         }}
       >
-        <div
-          style={{
-            color: "#838383",
-            fontSize: 10,
-            fontFamily: "Inter",
-            fontWeight: "400",
-            wordWrap: "break-word",
-          }}
-        >
-          Create a Meeting
-        </div>
         <div
           style={{
             alignSelf: "stretch",
@@ -88,6 +90,7 @@ function Details({
               }}
             >
               <input
+                className="hint-text"
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -130,7 +133,8 @@ function Details({
                 Description (Optional)
               </div>
               <textarea
-                placeholder="Add details"
+                className="hint-text"
+                placeholder="Add Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 rows={8}

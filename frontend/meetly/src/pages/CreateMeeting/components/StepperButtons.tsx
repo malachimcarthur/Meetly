@@ -33,7 +33,6 @@ function StepperButtons({
           display: "flex",
           cursor: "pointer",
           border: "none",
-          visibility: step === 3 ? "hidden" : "visible",
         }}
         onClick={() => {
           if (step > 0) {

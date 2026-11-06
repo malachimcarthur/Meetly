@@ -34,17 +34,6 @@ function Confirm({
       >
         <div
           style={{
-            color: "#838383",
-            fontSize: 10,
-            fontFamily: "Inter",
-            fontWeight: "400",
-            wordWrap: "break-word",
-          }}
-        >
-          Create a Meeting
-        </div>
-        <div
-          style={{
             alignSelf: "stretch",
             flex: "1 1 0",
             flexDirection: "column",
