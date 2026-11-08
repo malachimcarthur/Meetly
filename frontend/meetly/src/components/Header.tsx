@@ -47,8 +47,8 @@ function Header() {
               style={{ width: 24, height: 24, borderRadius: 6 }}
               src={
                 isMenuOpen
-                  ? "source\bg_removal [Background removed].png"
-                  : "source\brand-mark.png"
+                  ? "source/hamburger_open.png"
+                  : "source/hamburger_closed.png"
               }
             />
           </button>
