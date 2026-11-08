@@ -1,12 +1,23 @@
-import AppLogo from "./AppLogo";
+import { useNavigate } from "react-router-dom";
+import type { CSSProperties } from "react";
 
-function Menu({
-  isMenuOpen,
-  setIsMenuOpen,
-}: {
-  isMenuOpen: boolean;
-  setIsMenuOpen: (value: React.SetStateAction<boolean>) => void;
-}) {
+function Menu() {
+  const navigate = useNavigate();
+
+  const buttonStyle: CSSProperties = {
+    width: 129,
+    height: 19,
+    color: "black",
+    fontSize: 14,
+    fontFamily: "Inter",
+    fontWeight: 400,
+    textAlign: "left",
+    cursor: "pointer",
+    border: "none",
+    background: "transparent",
+    padding: 0,
+  };
+
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
       <div
@@ -19,176 +30,31 @@ function Menu({
           background: "#F5F3F3",
         }}
       />
-      <div
+      <nav
         style={{
-          width: 146,
-          height: 30,
-          left: 0,
-          top: 0,
           position: "absolute",
-          background: "#2EA24D",
-          borderBottomRightRadius: 5,
-          borderBottomLeftRadius: 5,
-        }}
-      />
-      <div
-        style={{
-          width: 167,
-          height: 56,
-          paddingLeft: 16,
-          paddingRight: 16,
-          paddingTop: 8,
-          paddingBottom: 8,
-          left: 0,
-          top: 0,
-          position: "absolute",
-          background: "#2EA24D",
-          boxShadow: "0px 6px 16px rgba(15, 77, 46, 0.10)",
-          borderBottomLeftRadius: 16,
-          justifyContent: "space-between",
-          alignItems: "center",
-          display: "inline-flex",
-        }}
-      >
-        <div
-          style={{
-            justifyContent: "flex-start",
-            alignItems: "center",
-            gap: 10,
-            display: "flex",
-          }}
-        >
-          <button
-            style={{
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-            }}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <img
-              style={{ width: 24, height: 24, borderRadius: 6 }}
-              src="source\brand-mark.png"
-            />
-          </button>
-          <AppLogo />
-        </div>
-      </div>
-      <div
-        style={{
-          width: 129,
-          height: 19,
-          left: 9,
-          top: 67,
-          position: "absolute",
-          justifyContent: "center",
+          left: 5,
+          paddingTop: 67,
           display: "flex",
           flexDirection: "column",
-          color: "black",
-          fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
+          gap: 4,
         }}
       >
-        Create a Meeting
-      </div>
-      <div
-        style={{
-          width: 129,
-          height: 19,
-          left: 9,
-          top: 185,
-          position: "absolute",
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "column",
-          color: "black",
-          fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        Settings
-      </div>
-      <div
-        style={{
-          width: 129,
-          height: 19,
-          left: 9,
-          top: 161,
-          position: "absolute",
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "column",
-          color: "black",
-          fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        Profile
-      </div>
-      <div
-        style={{
-          width: 129,
-          height: 19,
-          left: 9,
-          top: 137,
-          position: "absolute",
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "column",
-          color: "black",
-          fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        Dashboard
-      </div>
-      <div
-        style={{
-          width: 129,
-          height: 19,
-          left: 9,
-          top: 113,
-          position: "absolute",
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "column",
-          color: "black",
-          fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        Your Availability
-      </div>
-      <div
-        style={{
-          width: 129,
-          height: 19,
-          left: 9,
-          top: 90,
-          position: "absolute",
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "column",
-          color: "black",
-          fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        Upcoming Meetings
-      </div>
+        <button style={buttonStyle} onClick={() => navigate("/create-meeting")}>
+          Create a Meeting
+        </button>
+        <button style={buttonStyle}>Settings</button>
+        <button style={buttonStyle}>Profile</button>
+        <button style={buttonStyle} onClick={() => navigate("/")}>
+          Dashboard
+        </button>
+        <button style={buttonStyle} onClick={() => navigate("/availability")}>
+          Your Availability
+        </button>
+        <button style={buttonStyle}>Upcoming Meetings</button>
+      </nav>
     </div>
   );
 }
+
 export default Menu;

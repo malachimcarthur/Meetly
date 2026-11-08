@@ -8,7 +8,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter basename="/Meetly">
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="" element={<Dashboard />} />
         <Route path="/availability" element={<Availability />} />
         <Route path="/create-meeting" element={<CreateMeeting />} />
       </Routes>
