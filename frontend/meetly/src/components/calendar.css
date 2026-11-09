@@ -1,9 +1,8 @@
-
 .calendar-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 1200px;
   overflow: hidden;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
@@ -13,7 +12,7 @@
 .calendar-header {
   display: grid;
   grid-template-columns: 80px repeat(7, 1fr);
-  background: #2EA24D;
+  background: #2ea24d;
   font-weight: bold;
   text-align: center;
   font-family: "Inter";
@@ -21,14 +20,12 @@
   border-bottom: 1px solid #e2e8f0;
 }
 
-
 .calendar-body {
   display: grid;
   grid-template-columns: 80px repeat(7, 1fr);
   flex: 1;
   min-height: 0;
 }
-
 
 .time-column {
   background: #f8fafc;
@@ -72,8 +69,8 @@
 }
 
 .day-section.active {
-  background-color: #a7f3d0; 
-  border-bottom-color: #2EA24D;
+  background-color: #a7f3d0;
+  border-bottom-color: #2ea24d;
 }
 
 .calendar-header {
@@ -143,5 +140,5 @@
 
 .quarter-section.active {
   background-color: #a7f3d0;
-  border-bottom-color: #2EA24D;
+  border-bottom-color: #2ea24d;
 }
