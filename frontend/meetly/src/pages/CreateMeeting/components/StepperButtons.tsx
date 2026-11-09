@@ -58,15 +58,18 @@ function StepperButtons({
         style={{
           width: 200,
           height: 48,
-          background: "#3CC160",
-          boxShadow: "0px 8px 18px rgba(60, 193, 96, 0.20)",
+          background: allowContinue ? "#3CC160" : "#CBD5E1",
+          boxShadow: allowContinue
+            ? "0px 8px 18px rgba(60, 193, 96, 0.20)"
+            : "none",
           borderRadius: 14,
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
-          cursor: "pointer",
+          cursor: allowContinue ? "pointer" : "not-allowed",
           border: "none",
         }}
+        disabled={!allowContinue}
         onClick={() => {
           if (step < 3) {
             setStep(step + 1);

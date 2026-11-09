@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from "react";
 import "./calendar.css";
 
 export class CalendarDay {
@@ -49,7 +49,12 @@ function getTimeLabel(hour: number, quarterIndex: number): string {
   return `${hour}:${minute.toString().padStart(2, "0")} ${period}`;
 }
 
-function getRelativeTime(dayName: string, hour: number, quarterIndex: number, amount: number): string {
+function getRelativeTime(
+  dayName: string,
+  hour: number,
+  quarterIndex: number,
+  amount: number,
+): string {
   if (amount > 0) {
     for (let i = 0; i < amount; i++) {
       quarterIndex = (quarterIndex + 1) % 4;
@@ -59,7 +64,7 @@ function getRelativeTime(dayName: string, hour: number, quarterIndex: number, am
     }
   } else {
     for (let i = 0; i > amount; i--) {
-      quarterIndex = ((quarterIndex - 1) % 4 + 4) % 4;
+      quarterIndex = (((quarterIndex - 1) % 4) + 4) % 4;
       if (quarterIndex === 3) {
         hour--;
       }
@@ -77,15 +82,19 @@ export function CalendarGrid({
 }) {
   const getIsActive = (key: string) => activeTimes[key];
   const setIsActive = (key: string, value: boolean) => {
-    setActiveTimes(prev => ({
+    setActiveTimes((prev) => ({
       ...prev,
-      [key]: value
+      [key]: value,
     }));
   };
   const [mouseDown, setMouseDown] = useState(false);
   const [activeBrush, setActiveBrush] = useState(true);
 
-  function GetQuarterSectionLabel(dayName: string, hour: number, quarterIndex: number): string {
+  function GetQuarterSectionLabel(
+    dayName: string,
+    hour: number,
+    quarterIndex: number,
+  ): string {
     if (!activeTimes[toKey(dayName, hour, quarterIndex)]) {
       return "";
     }
@@ -94,9 +103,19 @@ export function CalendarGrid({
     if (!activeTimes[previous] && activeTimes[next]) {
       return getTimeLabel(hour, quarterIndex);
     } else if (!activeTimes[previous] && !activeTimes[next]) {
-      return getTimeLabel(hour, quarterIndex) + " – " + getTimeLabel(quarterIndex === 3 ? hour + 1 : hour, (quarterIndex + 1) % 4);
+      return (
+        getTimeLabel(hour, quarterIndex) +
+        " – " +
+        getTimeLabel(
+          quarterIndex === 3 ? hour + 1 : hour,
+          (quarterIndex + 1) % 4,
+        )
+      );
     } else if (activeTimes[previous] && !activeTimes[next]) {
-      return getTimeLabel(quarterIndex === 3 ? hour + 1 : hour, (quarterIndex + 1) % 4);
+      return getTimeLabel(
+        quarterIndex === 3 ? hour + 1 : hour,
+        (quarterIndex + 1) % 4,
+      );
     } else {
       return "";
     }
@@ -106,30 +125,32 @@ export function CalendarGrid({
     <div className="calendar-wrapper">
       <div className="calendar-header">
         <div>Time</div>
-        {DAYS.map(day => (
+        {DAYS.map((day) => (
           <div key={day}>{day}</div>
         ))}
       </div>
 
       <div className="calendar-body">
         <div className="time-column">
-          {HOURS.map(hour => (
-            <div key={hour} className="time-slot">{getHourLabel(hour)}</div>
+          {HOURS.map((hour) => (
+            <div key={hour} className="time-slot">
+              {getHourLabel(hour)}
+            </div>
           ))}
         </div>
 
-        {DAYS.map(dayName => (
+        {DAYS.map((dayName) => (
           <div key={dayName} className="calendar-day-column">
-            {HOURS.map(hour => (
+            {HOURS.map((hour) => (
               <div key={hour} className="hour-block">
-                {[0, 1, 2, 3].map(quarterIndex => {
+                {[0, 1, 2, 3].map((quarterIndex) => {
                   const key = `${dayName}-${hour}-${quarterIndex}`;
                   const isActive = activeTimes[key] || false;
-                  
+
                   return (
                     <div
                       key={quarterIndex}
-                      className={`quarter-section ${isActive ? 'active' : ''}`}
+                      className={`quarter-section ${isActive ? "active" : ""}`}
                       onMouseDown={(e) => {
                         e.preventDefault();
                         setMouseDown(true);

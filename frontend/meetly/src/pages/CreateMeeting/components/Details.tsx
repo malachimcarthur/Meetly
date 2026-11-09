@@ -93,7 +93,12 @@ function Details({
                 className="hint-text"
                 type="text"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={(e) => {
+                  setTitle(e.target.value);
+                  e.target.value.length != 0
+                    ? setAllowContinue(true)
+                    : setAllowContinue(false);
+                }}
                 placeholder="Add Event Name"
                 maxLength={100}
                 style={{

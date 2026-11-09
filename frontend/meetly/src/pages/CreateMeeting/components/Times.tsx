@@ -215,7 +215,10 @@ function Times({
               Select Available Times
             </div>
           </div>
-          <CalendarGrid activeTimes={activeTimes} setActiveTimes={setActiveTimes} />
+          <CalendarGrid
+            activeTimes={activeTimes}
+            setActiveTimes={setActiveTimes}
+          />
         </div>
       </div>
     </div>
