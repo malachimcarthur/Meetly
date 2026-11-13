@@ -14,6 +14,10 @@ Intended users: Anyone that needs to schedule a meeting based around others' sch
 - No info is saved, so all functions are simulated
 - Inputs are not sanitized/validated
 
+## Usage
+Visit https://malachimcarthur.github.io/Meetly/ on browser of choice
+If hosted version is unavailable, follow instructions below to run locally
+
 ## Prerequisites
 
 - Node.js and npm

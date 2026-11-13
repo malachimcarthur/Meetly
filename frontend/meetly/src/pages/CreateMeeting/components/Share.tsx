@@ -121,12 +121,8 @@ function Share() {
             style={{
               alignSelf: "stretch",
               height: 44,
-              paddingLeft: 14,
-              paddingRight: 14,
-              background: "white",
-              boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
-              borderRadius: 14,
-              outline: "1px #D7E7DD solid",
+              paddingLeft: 0,
+              paddingRight: 0,
               outlineOffset: "-1px",
               justifyContent: "flex-start",
               alignItems: "center",
@@ -155,7 +151,6 @@ function Share() {
                 if (event.key === 'Enter') AddEmail(emailEntry);
               }}
             />
-
             <div
               style={{
                 width: 32,
