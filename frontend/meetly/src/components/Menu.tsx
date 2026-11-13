@@ -9,7 +9,6 @@ function Menu() {
     height: 19,
     color: "black",
     fontSize: 14,
-    fontFamily: "Inter",
     fontWeight: 400,
     textAlign: "left",
     cursor: "pointer",

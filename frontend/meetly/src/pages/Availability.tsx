@@ -34,8 +34,7 @@ function Availability() {
           style={{
             color: "#838383",
             fontSize: 10,
-            fontFamily: "Inter",
-            fontWeight: "400",
+                fontWeight: "400",
             wordWrap: "break-word",
           }}
         >
@@ -80,8 +79,7 @@ function Availability() {
             style={{
               color: "#2EA24D",
               fontSize: 14,
-              fontFamily: "Inter",
-              fontWeight: "700",
+                    fontWeight: "700",
               wordWrap: "break-word",
             }}
           >

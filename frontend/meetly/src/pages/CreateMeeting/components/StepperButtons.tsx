@@ -46,8 +46,7 @@ function StepperButtons({
           style={{
             color: "#2EA24D",
             fontSize: 14,
-            fontFamily: "Inter",
-            fontWeight: "700",
+                fontWeight: "700",
             wordWrap: "break-word",
           }}
         >
@@ -82,8 +81,7 @@ function StepperButtons({
           style={{
             color: "white",
             fontSize: 14,
-            fontFamily: "Inter",
-            fontWeight: "700",
+                fontWeight: "700",
             wordWrap: "break-word",
           }}
         >

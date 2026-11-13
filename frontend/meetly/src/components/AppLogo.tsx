@@ -7,7 +7,6 @@ function AppLogo() {
       style={{
         color: "white",
         fontSize: 18,
-        fontFamily: "Inter",
         fontWeight: "700",
         wordWrap: "break-word",
         background: "transparent",

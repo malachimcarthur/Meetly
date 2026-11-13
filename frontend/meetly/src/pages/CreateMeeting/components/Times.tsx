@@ -38,8 +38,7 @@ function Times({
           style={{
             color: "#838383",
             fontSize: 10,
-            fontFamily: "Inter",
-            fontWeight: "400",
+                fontWeight: "400",
             wordWrap: "break-word",
           }}
         >
@@ -92,8 +91,7 @@ function Times({
                 style={{
                   color: "#2EA24D",
                   fontSize: 14,
-                  fontFamily: "Inter",
-                  fontWeight: "700",
+                            fontWeight: "700",
                   wordWrap: "break-word",
                 }}
               >
@@ -116,8 +114,7 @@ function Times({
                 style={{
                   color: "white",
                   fontSize: 14,
-                  fontFamily: "Inter",
-                  fontWeight: "700",
+                            fontWeight: "700",
                   wordWrap: "break-word",
                 }}
               >
@@ -129,8 +126,7 @@ function Times({
             style={{
               color: "#1F2937",
               fontSize: 13,
-              fontFamily: "Inter",
-              fontWeight: "600",
+                    fontWeight: "600",
               wordWrap: "break-word",
             }}
           >
@@ -157,8 +153,7 @@ function Times({
                 flex: "1 1 0",
                 color: "#6B7280",
                 fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: "400",
+                        fontWeight: "400",
                 wordWrap: "break-word",
               }}
             >
@@ -184,8 +179,7 @@ function Times({
                   flexDirection: "column",
                   color: "white",
                   fontSize: 14,
-                  fontFamily: "Inter",
-                  fontWeight: "600",
+                            fontWeight: "600",
                   wordWrap: "break-word",
                 }}
               >
@@ -207,8 +201,7 @@ function Times({
               style={{
                 color: "#1F2937",
                 fontSize: 13,
-                fontFamily: "Inter",
-                fontWeight: "600",
+                        fontWeight: "600",
                 wordWrap: "break-word",
               }}
             >

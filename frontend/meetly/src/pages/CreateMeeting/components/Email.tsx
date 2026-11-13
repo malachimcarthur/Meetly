@@ -21,8 +21,7 @@ function Email({ email, onRemove }: { email: String, onRemove: () => void }) {
           flex: "1 1 0",
           color: "black",
           fontSize: 14,
-          fontFamily: "Inter",
-          fontWeight: "400",
+            fontWeight: "400",
           wordWrap: "break-word",
         }}
       >
@@ -47,8 +46,7 @@ function Email({ email, onRemove }: { email: String, onRemove: () => void }) {
           style={{
             color: "white",
             fontSize: 14,
-            fontFamily: "Inter",
-            fontWeight: "700",
+                fontWeight: "700",
             wordWrap: "break-word",
           }}
         >

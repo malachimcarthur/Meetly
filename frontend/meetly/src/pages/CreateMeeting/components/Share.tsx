@@ -57,8 +57,7 @@ function Share() {
             style={{
               color: "#1F2937",
               fontSize: 13,
-              fontFamily: "Inter",
-              fontWeight: "600",
+                    fontWeight: "600",
               wordWrap: "break-word",
             }}
           >
@@ -106,8 +105,7 @@ function Share() {
                   style={{
                     color: "white",
                     fontSize: 14,
-                    fontFamily: "Inter",
-                    fontWeight: "700",
+                                fontWeight: "700",
                     background: "#3CC160",
                     cursor: "pointer",
                     border: "none",}}
@@ -167,8 +165,7 @@ function Share() {
                 style={{
                   color: "white",
                   fontSize: 14,
-                  fontFamily: "Inter",
-                  fontWeight: "700",
+                            fontWeight: "700",
                   wordWrap: "break-word",
                   background: "#3CC160",
                   cursor: "pointer",
@@ -184,8 +181,7 @@ function Share() {
             style={{
               color: "#1F2937",
               fontSize: 13,
-              fontFamily: "Inter",
-              fontWeight: "600",
+                    fontWeight: "600",
               wordWrap: "break-word",
             }}
           >
@@ -204,8 +200,7 @@ function Share() {
               fontSize: 13,
               flexDirection: "column",
               justifyContent: "flex-start",
-              fontFamily: "Inter",
-              alignItems: "center",
+                    alignItems: "center",
               gap: 7,
               display: "flex",
             }}

@@ -67,8 +67,7 @@ function Confirm({
                   textAlign: "center",
                   color: "#1F2937",
                   fontSize: 24,
-                  fontFamily: "Inter",
-                  fontWeight: "600",
+                            fontWeight: "600",
                   wordWrap: "break-word",
                 }}
               >
@@ -89,8 +88,7 @@ function Confirm({
                 style={{
                   color: "#1F2937",
                   fontSize: 13,
-                  fontFamily: "Inter",
-                  fontWeight: "600",
+                            fontWeight: "600",
                   wordWrap: "break-word",
                 }}
               >
@@ -111,8 +109,7 @@ function Confirm({
                 style={{
                   color: "#1F2937",
                   fontSize: 13,
-                  fontFamily: "Inter",
-                  fontWeight: "400",
+                            fontWeight: "400",
                   wordWrap: "break-word",
                 }}
               >
@@ -133,8 +130,7 @@ function Confirm({
                 style={{
                   color: "#1F2937",
                   fontSize: 13,
-                  fontFamily: "Inter",
-                  fontWeight: "600",
+                            fontWeight: "600",
                   wordWrap: "break-word",
                 }}
               >
@@ -156,8 +152,7 @@ function Confirm({
               style={{
                 color: "#1F2937",
                 fontSize: 13,
-                fontFamily: "Inter",
-                fontWeight: "600",
+                        fontWeight: "600",
                 wordWrap: "break-word",
               }}
             >
@@ -168,8 +163,7 @@ function Confirm({
             style={{
               color: "#1F2937",
               fontSize: 13,
-              fontFamily: "Inter",
-              fontWeight: "400",
+                    fontWeight: "400",
               wordWrap: "break-word",
             }}
           >
@@ -179,8 +173,7 @@ function Confirm({
             style={{
               color: "#1F2937",
               fontSize: 13,
-              fontFamily: "Inter",
-              fontWeight: "400",
+                    fontWeight: "400",
               wordWrap: "break-word",
             }}
           >

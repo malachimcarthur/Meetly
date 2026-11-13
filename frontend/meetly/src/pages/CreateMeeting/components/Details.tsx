@@ -28,14 +28,12 @@ function Details({
     >
       <style>{`
         .hint-text {
-          font-family: Inter, sans-serif;
           font-size: 12px;
         }
 
         .hint-text::placeholder {
           color: #B8BFC9;
           opacity: 1;
-          font-family: Inter, sans-serif;
           font-size: 12px;
         }
       `}</style>
@@ -76,8 +74,7 @@ function Details({
               style={{
                 color: "#1F2937",
                 fontSize: 13,
-                fontFamily: "Inter",
-                fontWeight: "600",
+                        fontWeight: "600",
                 wordWrap: "break-word",
               }}
             >
@@ -130,8 +127,7 @@ function Details({
                 style={{
                   color: "#1F2937",
                   fontSize: 13,
-                  fontFamily: "Inter",
-                  fontWeight: "600",
+                            fontWeight: "600",
                   wordWrap: "break-word",
                 }}
               >

@@ -61,8 +61,7 @@ function Dashboard() {
               style={{
                 color: "white",
                 fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: "700",
+                        fontWeight: "700",
                 wordWrap: "break-word",
               }}
             >
@@ -96,8 +95,7 @@ function Dashboard() {
               style={{
                 color: "#2EA24D",
                 fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: "700",
+                        fontWeight: "700",
                 wordWrap: "break-word",
               }}
             >
@@ -109,8 +107,7 @@ function Dashboard() {
           style={{
             color: "#1F2937",
             fontSize: 13,
-            fontFamily: "Inter",
-            fontWeight: "600",
+                fontWeight: "600",
             wordWrap: "break-word",
           }}
         >
@@ -147,8 +144,7 @@ function Dashboard() {
               style={{
                 color: "#2EA24D",
                 fontSize: 12,
-                fontFamily: "Inter",
-                fontWeight: "700",
+                        fontWeight: "700",
                 wordWrap: "break-word",
               }}
             >
@@ -166,8 +162,7 @@ function Dashboard() {
                 style={{
                   color: "#1F2937",
                   fontSize: 13,
-                  fontFamily: "Inter",
-                  fontWeight: "600",
+                            fontWeight: "600",
                   wordWrap: "break-word",
                 }}
               >
@@ -177,8 +172,7 @@ function Dashboard() {
                 style={{
                   color: "#6B7280",
                   fontSize: 12,
-                  fontFamily: "Inter",
-                  fontWeight: "500",
+                            fontWeight: "500",
                   wordWrap: "break-word",
                 }}
               >
@@ -190,8 +184,7 @@ function Dashboard() {
                 alignSelf: "stretch",
                 color: "#6B7280",
                 fontSize: 12,
-                fontFamily: "Inter",
-                fontWeight: "500",
+                        fontWeight: "500",
                 wordWrap: "break-word",
               }}
             >
@@ -216,8 +209,7 @@ function Dashboard() {
               style={{
                 color: "#2EA24D",
                 fontSize: 14,
-                fontFamily: "Inter",
-                fontWeight: "700",
+                        fontWeight: "700",
                 wordWrap: "break-word",
               }}
             >

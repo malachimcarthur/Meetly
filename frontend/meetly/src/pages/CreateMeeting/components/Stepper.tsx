@@ -21,8 +21,7 @@ function Stepper({ step }: { step: number }) {
         style={{
           color: "#444444",
           fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
+            fontWeight: "400",
           wordWrap: "break-word",
         }}
       >
@@ -61,8 +60,7 @@ function Stepper({ step }: { step: number }) {
                   style={{
                     color: reached ? "white" : "#9CA3AF",
                     fontSize: 12,
-                    fontFamily: "Inter",
-                    fontWeight: "700",
+                                fontWeight: "700",
                     wordWrap: "break-word",
                   }}
                 >
@@ -111,8 +109,7 @@ function Stepper({ step }: { step: number }) {
                   textAlign: "center",
                   color: step >= number - 1 ? "#2EA24D" : "#9CA3AF",
                   fontSize: 12,
-                  fontFamily: "Inter",
-                  fontWeight: step === number - 1? "600" : "500",
+                            fontWeight: step === number - 1? "600" : "500",
                   wordWrap: "break-word",
                 }}
               >

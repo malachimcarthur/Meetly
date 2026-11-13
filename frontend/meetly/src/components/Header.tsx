@@ -87,8 +87,7 @@ function Header() {
                 style={{
                   color: "#2EA24D",
                   fontSize: 12,
-                  fontFamily: "Inter",
-                  fontWeight: "700",
+                            fontWeight: "700",
                   wordWrap: "break-word",
                 }}
               >

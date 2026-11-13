@@ -15,7 +15,6 @@
   background: #2ea24d;
   font-weight: bold;
   text-align: center;
-  font-family: "Inter";
   color: #ffffff;
   border-bottom: 1px solid #e2e8f0;
 }
@@ -29,7 +28,6 @@
 
 .time-column {
   background: #f8fafc;
-  font-family: "Inter";
   border-right: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
