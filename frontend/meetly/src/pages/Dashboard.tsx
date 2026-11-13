@@ -30,17 +30,6 @@ function Dashboard() {
       >
         <div
           style={{
-            color: "#838383",
-            fontSize: 10,
-            fontFamily: "Inter",
-            fontWeight: "400",
-            wordWrap: "break-word",
-          }}
-        >
-          Dashboard
-        </div>
-        <div
-          style={{
             alignSelf: "stretch",
             justifyContent: "flex-start",
             alignItems: "flex-start",
