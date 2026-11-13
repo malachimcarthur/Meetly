@@ -12,7 +12,14 @@ function StepperButtons({
   return (
     <div
       style={{
-        alignSelf: "stretch",
+        position: "fixed",
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 10,
+        boxSizing: "border-box",
+        padding: 4,
+        background: "#F7FBF8",
         justifyContent: "flex-end",
         alignItems: "center",
         gap: 10,

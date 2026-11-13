@@ -18,24 +18,48 @@ function CreateMeeting() {
   const renderStep = () => {
     switch (step) {
       case 0:
-        return <Details setAllowContinue={setAllowContinue} title={title} setTitle={setTitle} description={description} setDescription={setDescription} />;
+        return (
+          <Details
+            setAllowContinue={setAllowContinue}
+            title={title}
+            setTitle={setTitle}
+            description={description}
+            setDescription={setDescription}
+          />
+        );
       case 1:
-        return <CalendarGrid activeTimes={activeTimes} setActiveTimes={setActiveTimes} />;
+        return (
+          <CalendarGrid
+            activeTimes={activeTimes}
+            setActiveTimes={setActiveTimes}
+          />
+        );
       case 2:
         return <Confirm title={title} description={description} />;
       case 3:
         return <Share />;
       default:
-        return <Details setAllowContinue={setAllowContinue} title={title} setTitle={setTitle} description={description} setDescription={setDescription} />;
+        return (
+          <Details
+            setAllowContinue={setAllowContinue}
+            title={title}
+            setTitle={setTitle}
+            description={description}
+            setDescription={setDescription}
+          />
+        );
     }
   };
   return (
     <div
       style={{
         width: "100%",
-        height: "100%",
+        minHeight: "100vh",
+        boxSizing: "border-box",
+        paddingBottom: 96,
         background: "#F7FBF8",
-        overflow: "hidden",
+        overflowX: "hidden",
+        overflowY: "auto",
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "flex-start",
@@ -45,6 +69,7 @@ function CreateMeeting() {
       <Header />
       <Stepper step={step} />
       {renderStep()}
+
       <StepperButtons
         step={step}
         setStep={setStep}
