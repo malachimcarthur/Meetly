@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Stepper from "./components/Stepper";
 import Details from "./components/Details";
@@ -15,6 +15,11 @@ function CreateMeeting() {
   const [description, setDescription] = useState("");
   const [activeTimes, setActiveTimes] = useState<Record<string, boolean>>({});
   const navigate = useNavigate();
+  useEffect(() => {
+    if (step === 1) {
+      setAllowContinue(Object.values(activeTimes).some(Boolean));
+    }
+  }, [step, activeTimes]);
   const renderStep = () => {
     switch (step) {
       case 0:
@@ -35,7 +40,7 @@ function CreateMeeting() {
           />
         );
       case 2:
-        return <Confirm title={title} description={description} />;
+        return <Confirm title={title} description={description} activeTimes={activeTimes} />;
       case 3:
         return <Share />;
       default:

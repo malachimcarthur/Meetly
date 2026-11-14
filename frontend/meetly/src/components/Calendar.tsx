@@ -149,8 +149,11 @@ export function CalendarGrid({
         Clear Selection
       </button>
     </div>
-
-    <div className="calendar-wrapper">
+    <div 
+      className="calendar-wrapper"
+      onMouseUp={() => setMouseDown(false)}
+      onMouseLeave={() => setMouseDown(false)}
+      >
       <div className="calendar-header">
         <div>Time</div>
         {DAYS.map((day) => (
