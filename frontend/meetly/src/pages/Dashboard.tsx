@@ -1,7 +1,18 @@
+import { useState } from "react";
+import type { FocusEvent } from "react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 function Dashboard() {
   const navigate = useNavigate();
+  const [focused, setFocused] = useState<"create" | "availability" | null>(null);
+  const focusProps = (name: "create" | "availability") => ({
+    onFocus: (event: FocusEvent<HTMLButtonElement>) => {
+      if (event.currentTarget.matches(":focus-visible")) {
+        setFocused(name);
+      }
+    },
+    onBlur: () => setFocused(null),
+  });
   return (
     <div
       style={{
@@ -38,6 +49,7 @@ function Dashboard() {
           }}
         >
           <button
+            {...focusProps("create")}
             style={{
               flex: "1 1 0",
               height: 48,
@@ -46,8 +58,8 @@ function Dashboard() {
               border: "none",
               borderRadius: 14,
               cursor: "pointer",
-              outline: "1px #D7E7DD solid",
-              outlineOffset: "-1px",
+              outline: focused === "create" ? "3px solid #1F7A38" : "1px #D7E7DD solid",
+              outlineOffset: focused === "create" ? 2 : -1,
               justifyContent: "center",
               alignItems: "center",
               gap: 8,
@@ -73,6 +85,7 @@ function Dashboard() {
             />
           </button>
           <button
+            {...focusProps("availability")}
             style={{
               flex: "1 1 0",
               height: 48,
@@ -81,8 +94,8 @@ function Dashboard() {
               cursor: "pointer",
               boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
               borderRadius: 14,
-              outline: "1px #D7E7DD solid",
-              outlineOffset: "-1px",
+              outline: focused === "availability" ? "3px solid #2EA24D" : "1px #D7E7DD solid",
+              outlineOffset: focused === "availability" ? 2 : -1,
               justifyContent: "center",
               alignItems: "center",
               display: "flex",

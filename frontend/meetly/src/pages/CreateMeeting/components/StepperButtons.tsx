@@ -1,3 +1,6 @@
+import { useState } from "react";
+import type { FocusEvent } from "react";
+
 function StepperButtons({
   step,
   setStep,
@@ -9,6 +12,15 @@ function StepperButtons({
   navigate: (path: string) => void;
   allowContinue: boolean;
 }) {
+  const [focused, setFocused] = useState<"back" | "next" | null>(null);
+  const focusProps = (name: "back" | "next") => ({
+    onFocus: (event: FocusEvent<HTMLButtonElement>) => {
+      if (event.currentTarget.matches(":focus-visible")) {
+        setFocused(name);
+      }
+    },
+    onBlur: () => setFocused(null),
+  });
   return (
     <div
       style={{
@@ -27,14 +39,15 @@ function StepperButtons({
       }}
     >
       <button
+        {...focusProps("back")}
         style={{
           width: 200,
           height: 48,
           background: "white",
           boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.07)",
           borderRadius: 14,
-          outline: "1px #D7E7DD solid",
-          outlineOffset: "-1px",
+          outline: focused === "back" ? "3px solid #2EA24D" : "1px #D7E7DD solid",
+          outlineOffset: focused === "back" ? 2 : -1,
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
@@ -61,6 +74,7 @@ function StepperButtons({
         </div>
       </button>
       <button
+        {...focusProps("next")}
         style={{
           width: 200,
           height: 48,
@@ -74,6 +88,9 @@ function StepperButtons({
           display: "flex",
           cursor: allowContinue ? "pointer" : "not-allowed",
           border: "none",
+          outline: focused === "next" ? "3px solid #1F7A38" : "none",
+          outlineOffset: 2,
+          
         }}
         disabled={!allowContinue}
         onClick={() => {
