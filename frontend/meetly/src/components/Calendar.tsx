@@ -121,7 +121,35 @@ export function CalendarGrid({
     }
   }
 
+  const handleClearSelection = () => {
+  setActiveTimes({});
+  };
+
   return (
+    <div className="calendar-container">
+    <div className="calendar-controls">
+      <button 
+        style={{
+                    color: "white",
+                    fontSize: 16,
+                    width: 150,
+                    borderRadius: 14,
+                    height: 30,
+                    fontWeight: "700",
+                    wordWrap: "break-word",
+                    background: "#3CC160",
+                    cursor: "pointer",
+                    border: "none",
+                  }}
+        type="button" 
+        className="clear-btn" 
+        onClick={handleClearSelection}
+        disabled={Object.keys(activeTimes).length === 0} // Optional: disables button if nothing is selected
+      >
+        Clear Selection
+      </button>
+    </div>
+
     <div className="calendar-wrapper">
       <div className="calendar-header">
         <div>Time</div>
@@ -176,6 +204,7 @@ export function CalendarGrid({
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

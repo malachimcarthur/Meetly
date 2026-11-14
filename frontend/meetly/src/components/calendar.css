@@ -9,6 +9,19 @@
   background: #ffffff;
 }
 
+.calendar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-controls  {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 12px;
+  margin-right: 16px;
+}
+
 .calendar-header {
   display: grid;
   grid-template-columns: 80px repeat(7, 1fr);

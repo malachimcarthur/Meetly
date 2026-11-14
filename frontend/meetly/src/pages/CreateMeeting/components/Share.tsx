@@ -165,7 +165,7 @@ function Share() {
                 style={{
                   color: "white",
                   fontSize: 14,
-                            fontWeight: "700",
+                  fontWeight: "700",
                   wordWrap: "break-word",
                   background: "#3CC160",
                   cursor: "pointer",
